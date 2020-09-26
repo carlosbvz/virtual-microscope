@@ -5,15 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "backend:dev": "npm run debug --prefix ./back-end",
-    "backend:prod": "npm run start --prefix ./back-end",
-    "backend:clear:build": "del ./back-end/public/build",
-    "backend:get:build": "move-cli ./front-end/build ./back-end/public/build && npm i --prefix ./back-end",
     "frontend:dev": "npm run start --prefix ./front-end",
     "frontend:build": "npm i --prefix ./front-end && npm run build --prefix ./front-end",
-    "start": "npm i --prefix ./back-end && npm run backend:prod",
-    "dev": "npm-run-all --parallel backend:dev frontend:dev",
-    "prod": "npm run frontend:build && npm run backend:clear:build && npm run backend:get:build && npm run backend:prod"
+    "backend:dev": "npm run debug --prefix ./back-end",
+    "backend:prod": "npm run start --prefix ./back-end",
+    "backend:build": "npm i --prefix ./back-end && del ./back-end/public/build && move-cli ./front-end/build ./back-end/public/build",
+    "start": "npm i && npm run frontend:build && npm run backend:build && npm run backend:prod",
+    "dev": "npm-run-all --parallel backend:dev frontend:dev"
   },
   "author": "Carlos B. - Julio O.",
   "license": "ISC",
