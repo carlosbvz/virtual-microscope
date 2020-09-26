@@ -11,8 +11,10 @@
     "backend:prod": "npm run start --prefix ./back-end",
     "backend:build": "npm i --prefix ./back-end && del ./back-end/public/build && move-cli ./front-end/build ./back-end/public/build",
     "start:working": "npm i && npm i --prefix ./back-end && npm run backend:prod",
-    "start": "npm i && npm run frontend:build && npm run backend:build && npm run backend:prod",
-    "dev": "npm-run-all --parallel backend:dev frontend:dev"
+    "start": "npm run backend:prod",
+    "heroku-postbuild": "npm i && npm run frontend:build && npm run backend:build",
+    "dev": "npm-run-all --parallel backend:dev frontend:dev",
+    "prod": "npm i && npm run frontend:build && npm run backend:build && npm run backend:prod"
   },
   "author": "Carlos B. - Julio O.",
   "license": "ISC",
