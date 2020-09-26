@@ -10,8 +10,8 @@
     "backend:dev": "npm run debug --prefix ./back-end",
     "backend:prod": "npm run start --prefix ./back-end",
     "backend:build": "npm i --prefix ./back-end && del ./back-end/public/build && move-cli ./front-end/build ./back-end/public/build",
-    "start": "npm i && npm i --prefix ./back-end && npm run backend:prod",
-    "start:old": "npm i && npm run frontend:build && npm run backend:build && npm run backend:prod",
+    "start:working": "npm i && npm i --prefix ./back-end && npm run backend:prod",
+    "start": "npm i && npm run frontend:build && npm run backend:build && npm run backend:prod",
     "dev": "npm-run-all --parallel backend:dev frontend:dev"
   },
   "author": "Carlos B. - Julio O.",
