@@ -1,0 +1,11 @@
+{
+  "id": "img-id123",
+  "imageUrl": "https://virtual-microscope-images.s3-us-west-2.amazonaws.com/img-id123/{z}/{y}/{x}.jpg",
+  "mapOptions": {
+    "center": [0, 0],
+    "zoom": 3,
+    "minZoom": 0,
+    "maxZoom": 7
+  },
+  "imageVersionedData": []
+}
