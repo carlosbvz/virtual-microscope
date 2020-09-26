@@ -259,7 +259,7 @@ export default class InteractiveImage extends Component {
               minZoom={this.props.mapOptions.minZoom}
             >
               <Controllers editPolygon={this.editPolygon} isEditing={this.state.isEditing} />
-              <TileLayer url={this.props.url} noWrap={true} attribution="Charlie Maps"/>
+              <TileLayer url={this.props.url} noWrap={true} attribution="Charlie & Julio Maps"/>
             </Map>
           </div>
         </ReactLeafletEditable>
